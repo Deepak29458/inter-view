@@ -1,0 +1,8 @@
+table {
+    width: 100%;
+}
+
+.mat-header-cell {
+    background: #f8f9fa;
+    font-size: medium;
+}

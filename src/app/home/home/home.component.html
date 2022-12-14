@@ -1,0 +1,211 @@
+<main>
+    <!-- Header Part -->
+    <section>
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a href="#" class="navbar-brand">
+                    <img src="http://velikorodnov.com/html/churhius/images/logo2.png" class=""/>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Nav Content -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <!-- Nav Items -->
+                    <div class="navbar-nav">
+                        <div class="nav-item">
+                            <a (click)="scroll(screen)" class="nav-link active" style="cursor: pointer;">Banner screen</a>
+                        </div>
+                        <div class="nav-item">
+                            <a (click)="scroll(features)" class="nav-link" style="cursor: pointer;">Features</a>
+                        </div>
+                        <div class="nav-item">
+                            <a (click)="scroll(testimonial)" class="nav-link" style="cursor: pointer;">Testimonial</a>
+                        </div>
+                        <div class="nav-item">
+                            <a (click)="scroll(blog)" class="nav-link" style="cursor: pointer;">Blog</a>
+                        </div>
+                    </div>
+                    <!-- Login Button -->
+                    <div class="navbar-nav ms-auto">
+                        <a routerLink="/login" class="nav-item nav-link">
+                            <button type="button" class="btn btn-outline-danger rounded-0">Login</button>
+                        </a>
+                    </div>
+                    <!-- Signup Button -->
+                    <div class="navbar-nav">
+                        <a routerLink="/register" class="nav-item nav-link">
+                            <button type="button" class="btn btn-outline-danger rounded-0">SignUp</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+    </section>
+
+    <!-- Banner Screen Part-->
+    <section class="pb-5 container-fluid" #screen>
+        <div class="row">
+            <div class="col-sm-6 d-flex align-items-center">
+                <div class="container">
+                    <h1>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultrices bibendum mollis. Sed aliquet, enim at vulputate porttitor, felis nunc vehicula ante, blandit lobortis mi massa non leo. Sed dui enim, interdum non rhoncus vitae, blandit eu eros. Nulla facilisi.</p>
+                </div>
+            </div>
+            <div class="col-sm-6" style="background-image: url('https://html.creativegigstf.com/rogan/rogan-c/html/images/shape/1.png');">
+                <img src="https://html.creativegigstf.com/rogan/rogan-c/html/images/shape/banner-shape1.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features part -->
+    <section class="pb-5" #features>
+        <div class="container text-center">
+             <!-- Blogs Title -->
+             <h1 class="fs-1 pb-4">Our Features</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <!-- Card Items -->
+                    <div class="card shadow-sm" style="width: 18rem;">
+                        <div class="card-body text-center">
+                            <h2>Commucation</h2>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4 mt-4">
+                    <!-- Card Items -->
+                    <div class="card shadow" style="width: 18rem;">
+                        <div class="card-body text-center">
+                            <h2>Inspier Design</h2>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <!-- Card Items -->
+                    <div class="card shadow-sm" style="width: 18rem;">
+                        <div class="card-body text-center">
+                            <h2>Happy Custmores</h2>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Part -->
+    <section class="pb-5" #blog>
+        <div class="container text-center">
+            <!-- Blogs Title -->
+            <h1 class="fs-1 pb-4">Blogs</h1>
+            <div class="row">
+                <div class="col-sm-3"  *ngFor="let items of blogList">
+                    <!-- Card Item -->
+                    <div class="card border border-0" style="width: 18rem;">
+                        <img [src]="items?.image" class="card-img-top mx-3 rounded" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title">{{items?.title}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials part-->
+    <section class="bg-light p-5" #testimonial>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- Card Item -->
+                                    <div class="card p-2">
+                                        <div class="d-flex align-items-center justify-content-evenly">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-xl me-4 flex-shrink-0">
+                                                <img src="https://img.icons8.com/bubbles/90/null/user-male.png"/>
+                                            </div>
+                                            <!-- Text -->
+                                            <div class="d-sm-flex mt-1 mt-md-0 align-items-center">
+                                                <h5 class="me-3 mb-0">Moonlight newspaper up its enjoyment agreeable depending.</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- Card Item -->
+                                    <div class="card p-2">
+                                        <div class="d-flex align-items-center justify-content-evenly">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-xl me-4 flex-shrink-0">
+                                                <img src="https://img.icons8.com/bubbles/90/null/active-female.png"/>
+                                            </div>
+                                            <!-- Text -->
+                                            <div class="d-sm-flex mt-1 mt-md-0 align-items-center">
+                                                <h5 class="me-3 mb-0">Moonlight newspaper up its enjoyment agreeable depending.</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- Card Item -->
+                                    <div class="card p-2">
+                                        <div class="d-flex align-items-center justify-content-evenly">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-xl me-4 flex-shrink-0">
+                                                <img src="https://img.icons8.com/bubbles/90/null/user-male.png"/>
+                                            </div>
+                                            <!-- Text -->
+                                            <div class="d-sm-flex mt-1 mt-md-0 align-items-center">
+                                                <h5 class="me-3 mb-0">Moonlight newspaper up its enjoyment agreeable depending.</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- Card Item -->
+                                    <div class="card p-2">
+                                        <div class="d-flex align-items-center justify-content-evenly">
+                                            <!-- Avatar -->
+                                            <div class="avatar avatar-xl me-4 flex-shrink-0">
+                                                <img src="https://img.icons8.com/bubbles/90/null/active-female.png"/>
+                                            </div>
+                                            <!-- Text -->
+                                            <div class="d-sm-flex mt-1 mt-md-0 align-items-center">
+                                                <h5 class="me-3 mb-0">Moonlight newspaper up its enjoyment agreeable depending.</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="">
+                        <!-- Title -->
+                        <h2 class="fs-1" style="color:#2AB2A6">Some valuable feedback</h2>
+                        <p>Supposing so be resolving breakfast am or perfectly. It drew a hill from me. Valley by oh twenty
+                            direct me so. Departure defective arranging rapturous did believe him all had supported. Family
+                            months lasted simple set nature vulgar him. Picture for attempt joy excited ten carried manners
+                            talking how.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

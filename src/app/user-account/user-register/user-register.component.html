@@ -1,0 +1,76 @@
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+	<section class="p-0 d-flex align-items-center position-relative overflow-hidden">
+	
+		<div class="container-fluid">
+			<div class="row vh-100">
+				<!-- left -->
+				<div class="col-12 col-lg-6 d-md-flex align-items-center justify-content-center bg-primary bg-opacity-10 vh-lg-100">
+					<div class="p-3 p-lg-5">
+						
+						<!-- SVG Image -->
+						<img src="https://eduport.webestica.com/assets/images/element/02.svg"  width="80%" class="mt-5" alt="">
+						<!-- Info -->
+					</div>
+				</div>
+
+				<!-- Right -->
+				<div class="col-12 col-lg-6 m-auto">
+					<div class="row my-5">
+						<div class="col-sm-10 col-xl-8 m-auto">
+						<!-- LOGO -->
+						<a routerLink="/" class="navbar-brand">
+							<img src="http://velikorodnov.com/html/churhius/images/logo2.png" class=" pb-3"/>
+						</a>
+							<!-- Title -->
+							<h1 class="fs-4 mb-4">Register</h1>
+
+							<!-- Form START -->
+							<form>
+								<!-- Email -->
+								<div class="mb-4">
+									<label for="exampleInputname" class="form-label">Name *</label>
+									<div class="input-group input-group-lg">
+										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="bi bi-envelope-fill fs-6"></i></span>
+										<input type="name" class="form-control formControl p-3 border-0 bg-light rounded-end ps-1 custom-field" placeholder="Name" id="exampleInputname" #name>
+									</div>
+								</div>
+
+								<!-- Email -->
+								<div class="mb-4">
+									<label for="exampleInputEmail1" class="form-label">Email address *</label>
+									<div class="input-group input-group-lg">
+										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="bi bi-envelope-fill fs-6"></i></span>
+										<input type="email" class="form-control formControl p-3 border-0 bg-light rounded-end ps-1 custom-field" placeholder="Email" id="exampleInputEmail1" #userName>
+									</div>
+								</div>
+								<!-- Password -->
+								<div class="mb-4">
+									<label for="inputPassword5" class="form-label">Password *</label>
+									<div class="input-group input-group-lg">
+										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="fas fa-lock fs-6"></i></span>
+										<input type="password" class="form-control formControl p-3 border-0 bg-light rounded-end ps-1 custom-field" placeholder="Password" id="inputPassword5" #userPassword>
+									</div>
+								</div>
+								<!-- Button -->
+								<div class="align-items-center mt-0">
+									<div class="d-grid">
+										<button class="btn mb-0 text-white" style="background-color:#313D9C;" (click)="authService.signUp(userName.value, userPassword.value)" type="button">Register</button>
+									</div>
+								</div>
+							</form>
+							<!-- Form END -->
+
+							<!-- Sign up link -->
+							<div class="mt-4 text-center">
+								<span>Already have an account? <a routerLink="/login" class="text-decoration-none">Signin</a></span>
+							</div>
+
+						</div>
+					</div> <!-- Row END -->
+				</div>
+			</div> <!-- Row END -->
+		</div>
+	</section>
+</main>
+<!-- **************** MAIN CONTENT END **************** -->

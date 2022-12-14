@@ -1,0 +1,10 @@
+::placeholder{
+    font-size: 1rem;
+}
+
+.custom-field{
+    /* padding: 15px 20px; */
+    box-shadow: none;
+    outline: none;
+    font-size: 1rem;
+}
